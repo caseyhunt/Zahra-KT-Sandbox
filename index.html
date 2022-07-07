@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toio Canvas Clicker</title>
+
+  <!-- Webapp settings -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Code prettify -->
+  <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+
+  <!-- P5JS Stuff -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+
+  <script src='https://meet.jit.si/external_api.js'></script>
+</head>
+<body>
+  <div class="grid">
+    <div class="col controls" style="visibility: hidden">
+
+      <img src="images/Group 29.svg" height ="66.8" width="58.5" id="btConnectCube1">
+      <img src="images/Group 28.svg" height ="66.8" width="58.5" id="RemoteConnected1">
+
+      <div id="canvas" class="cclicker" style="display:none">
+      </div>
+
+      <div class="sliders">
+        <div id="spd">
+      <h3 class="labl">Speed</h3>
+    <input type="range"  min="15" max="120" value="50" class='slider' id="slider1">
+    </div>
+  </div>
+
+      <div id="dial">
+      </div>
+
+    </div>
+
+    <div class="col">
+      <div id="meet"></div>
+    </div>
+
+    <div class="col controls" style="visibility: hidden">
+
+      <img src="images/Group 29.svg" height ="66.8" width="58.5" id="btConnectCube2">
+      <img src="images/Group 28.svg" height ="66.8" width="58.5" id="RemoteConnected2">
+
+      <div id="canvas1" class="cclicker" style="display:none">
+      </div>
+
+      <div class="sliders">
+        <div id="spd2">
+      <h3 class="labl">Speed</h3>
+    <input type="range"  min="15" max="120" value="50" class='slider' id="slider2">
+    </div>
+  </div>
+
+      <div id="dial1">
+      </div>
+
+    </div>
+  </div>
+
+
+<div id="modalbg">
+  <div id="remote-connect" class="remote-connect">
+    <h1 id="close">X</h1>
+    <h1 class="head">Connect to a Remote Toio!</h1>
+
+    <form id="cube1" onsubmit="return false;">
+  <div id="uconnect">
+    <h3 id="connected"></h3>
+      <select name="user" id="user">
+      </select>
+      <button  id="connect">Connect</button>
+  </div>
+  </form>
+</div>
+</div>
+
+
+        <!-- <form onsubmit="return false;">
+          <input type="text" id="name">
+        <br/>
+          <button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised" id="namesubmit" >Submit</button>
+        </form> -->
+
+  <div id="hide">
+  <H1 style="display:none">Welcome to Toio Canvas Clicker</h1>
+  <h2 style="display:none">Click the Canvas to select a location for the Toio</h2>
+  <div id="cube-connect" class="inactive">
+          <div id="operation" class="operation">
+            <h2 id="connecttocube">Connect to Toio Core Cube</h2>
+            <div class="operationContent">
+              <button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised" id="btConnectCube1">Connect Cube 1</button>
+              <button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised" disabled id="btConnectCube2" style = "visibility:hidden">Connect Cube 2</button>
+              <button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised" disabled id="btConnectCube3" style="visibility:hidden">Connect Cube 3</button>
+          </div>
+          <div class="footer">
+            <button id="next">Continue</button>
+          </div>
+        </div>
+  </div>
+  <div class="position">
+    <button class="mui-btn mui-btn--small mui-btn--primary mui-btn--raised" id="getPos" style="display:none">Get Position</button>
+    <h3 id="xpos" style="display:none">x position: </h3>
+    <h3 id="ypos" style = "display:none">y position: </h3>
+    <h3 id="angle" style="display:none">angle (degrees): </h3>
+  </div>
+
+  <!-- <div class="connected_user">
+    <h5>Remote Connected Users:</h5>
+  </div> -->
+  <div id="cube-control" class="inactive">
+      <form id="cube1" onsubmit="return false;">
+        <div id="switch">
+      <label class="switch">
+      <input type="checkbox" id='toggle' >
+      <span class="sslider"></span>
+      </label>
+      </form>
+    </div>
+    <div id="modalbg">
+    <div id="uconnect">
+      <i class="fa-solid fa-x"></i>
+      <h3 id="connected1"></h3>
+        <select name="user" id="user">
+        </select>
+        <button  id="connect">Connect</button>
+    </div>
+  </div>
+
+
+<div id="slider">
+
+  <div class="sliders">
+    <div id="spd">
+  <h3 class="labl">Speed</h3>
+<input type="range"  min="15" max="120" value="50" class='slider' id="slider1">
+</div>
+<div id="canvas" class="cclicker">
+</div>
+</div>
+<!-- <div class="sliders">
+  <h3 class="labl">Angle</h3>
+<input type="range"  min="0" max="360" value="90" class='slider' id="slider2">
+</div> -->
+
+<div id="dial">
+</div>
+
+
+
+
+
+  <div id="buttons">
+    <button id="spin">Spin</button>
+    <button id="party">Party</button>
+    <button id="shuffle">Shuffle</button>
+  </div>
+
+  </div>
+  </div>
+
+</div>
+      <script src="/socket.io/socket.io.js"></script>
+      <script src="client.js"></script>
+      <!--switch the next line to get a horizontal dial arrangement-->
+      <script type="text/javascript" src="joystick_only.js"></script>
+      <!-- <script type="text/javascript" src="dial-vertical.js"></script> -->
+    <!-- <script type="text/javascript" src="index.js"></script> -->
+</body>
