@@ -1,4 +1,4 @@
-var socket = io();
+// var socket = io();
 
 var button = document.getElementById('button');
 
