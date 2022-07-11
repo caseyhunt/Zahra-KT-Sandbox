@@ -11,7 +11,7 @@ if(typeof myp5 === 'undefined'){
       console.log(scale);
       console.log('changing scale');
     }else{
-      scale = 0.4;
+      scale = 0.48;
       center = [(250)/2, (250)/2]; //x,y
       console.log(scale);
     }
