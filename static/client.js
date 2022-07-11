@@ -294,7 +294,7 @@ api.addListener("videoConferenceJoined", function(res)
 
    const changeConnectCubeButtonStatus = ( idButton, cube, enabled ) => {
      console.log('change button status' + 'btConnectCube' + idButton);
-     document.getElementById( 'btConnectCube' + idButton).src="images/Group 46.svg";
+     document.getElementById( 'btConnectCube' + idButton).src="static/images/Group 46.svg";
 
        // if( idButton ){
        //     changeButtonStatus( 'btConnectCube' + ( idButton), enabled );
@@ -1105,7 +1105,7 @@ function stopping(n){
              }else{
                isconnected1 = 0;
                rcUID = user;
-               document.getElementById( 'RemoteConnected1').src="images/Group 30.svg";
+               document.getElementById( 'RemoteConnected1').src="static/images/Group 30.svg";
 
              }
 
@@ -1134,7 +1134,7 @@ function stopping(n){
            }else{
              isconnected2 = 0;
              rcUID2 = user;
-             document.getElementById( 'RemoteConnected2').src="images/Group 30.svg";
+             document.getElementById( 'RemoteConnected2').src="static/images/Group 30.svg";
 
            }
 
@@ -1169,7 +1169,7 @@ function stopping(n){
            // socket.emit('rc end', rcUID2);
            document.getElementById("canvas1").innerHTML = "<div id='toio'> </div>";
            rcUID2 = undefined;
-           document.getElementById( 'RemoteConnected2').src="images/Group 28.svg";
+           document.getElementById( 'RemoteConnected2').src="static/images/Group 28.svg";
 
          }
          var user = null;
