@@ -12,14 +12,14 @@ if(typeof myp5 === 'undefined'){
       console.log('changing scale');
     }else{
       scale = 0.48;
-      center = [(250)/2, (250)/2]; //x,y
+      center = [(195)/2, (250)/2]; //x,y
       console.log(scale);
     }
     let triscale = scale*2.5;
 
 
     //radius of the base of the joystick
-    let brad = 200*scale;
+    let brad = 160*scale;
     let nrad = .36*brad;
 
     //center = [center[0],200];
@@ -295,8 +295,8 @@ let joystick1 = function(p) {
         center = [(100)/2, (100)/2];
         console.log('changing scale');
       }else{
-        scale = 0.4;
-        center = [(250)/2, (250)/2];
+        scale = 0.48;
+        center = [(195)/2, (250)/2];
         console.log(scale);
       }
 
@@ -305,7 +305,7 @@ let joystick1 = function(p) {
 
 
       //radius of the base of the joystick
-      let brad = 200*scale;
+      let brad = 160*scale;
       let nrad = .36*brad;
       //center = [center[0],200];
       let outx = 0;
