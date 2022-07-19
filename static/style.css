@@ -2,19 +2,15 @@
   margin-left: 31px;
 }
 
-
-
 body{
-  /* padding-left:50px; */
   /* background: rgb(4, 4, 4); */
   background:#e4edec;
-  /* padding-top: 2px; */
   margin-left:0;
 }
 
 .grid{
   display: grid;
-  grid-template-columns: 15vw 70vw 15vw;
+  grid-template-columns: 18vw 64vw 18vw;
   grid-column-gap: 0;
   grid-template-rows: auto;
 }
@@ -27,12 +23,20 @@ body{
   margin-top: 30px;
 }
 
+
 #slider1, #slider2{
-  /* margin-top: 200px; */
-  margin-left: 175px;
-  width: 90px;
+  /* margin-top: 200px;*/
+  width: 120px;
   margin-bottom: 20px;
   /* height: 25px; */
+}
+
+#slider1 {
+  margin-left: 60px;
+}
+
+#slider2 {
+  margin-left: 30px;
 }
 
 #btConnectCube2, #btConnectCube1 {
@@ -148,11 +152,12 @@ h4{
   border-radius:10px;
   width:170px;
   height:170px;
-  margin: auto;
-  /* margin-top:20px; */
+  /* margin: auto; */
 }
 
-
+#canvas1 {
+  padding-left: 0px;
+}
 
 select{
   margin:auto;
@@ -204,9 +209,9 @@ select{
   top: 20px;
 }
 
-.position, #light{
-  /* margin-top: 40px; */
-}
+/* .position, #light{
+  margin-top: 40px;
+} */
 
 #getPos{
   display:block;
@@ -335,9 +340,9 @@ h5{
   justify-self: start;
 }
 
-#uconnect{
-  /* margin-left: -15%; */
-}
+/* #uconnect{
+  margin-left: -15%;
+} */
 
 
 h2{
@@ -397,7 +402,7 @@ button{
 
 
 canvas{
-  margin:auto;
+  margin:none;
   display: block;
 }
 
@@ -445,8 +450,9 @@ select{
 
   #slider1,#slider2{
     width:55px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
   }
+  
 
   #slider1::-webkit-slider-thumb {
     -webkit-appearance: none;
@@ -609,6 +615,8 @@ input:checked + .sslider:before {
 
 }
 
+
+
 .colors.active{
   border-radius: 25px;
   border:solid 4.5px #2bc23f;
@@ -656,7 +664,7 @@ background-color: #f50a9f;
 }
 
 #meet{
-  width: 60vw;
+  width: 62vw;
   height: 98vh;
   margin: auto;
   align-items: center;
