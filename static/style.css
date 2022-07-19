@@ -29,10 +29,10 @@ body{
 
 #slider1, #slider2{
   /* margin-top: 200px; */
-  margin-left:75px;
-
+  margin-left: 175px;
   width: 90px;
-  height: 18px;
+  margin-bottom: 20px;
+  /* height: 25px; */
 }
 
 #btConnectCube2, #btConnectCube1 {
@@ -45,6 +45,7 @@ body{
 #slider1::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
+  border-radius: 50%;
   width: 25px;
   height: 25px;
   background:#2196F3;
@@ -54,6 +55,7 @@ body{
 #slider2::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
+  border-radius: 50%;
   width: 25px;
   height: 25px;
   background:#2196F3;
@@ -63,13 +65,19 @@ body{
 .slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 25px;
+  height: 15px;
   background: #d3d3d3;
+  border-radius: 12px;
   outline: none;
-  -webkit-transition: .2s;
-  transition: opacity .2s;
+  opacity: 1;
+  /* -webkit-transition: .2s;
+  transition: opacity .2s; */
 }
 
+.slider:hover
+{
+  opacity: 1;
+}
 
 
 #slider1::-moz-range-progress {
@@ -97,6 +105,7 @@ body{
   height: 15px;
   background: #2196F3;
   cursor: pointer;
+  border-radius: 12px;
 }
 
 #slider2::-moz-range-thumb {
