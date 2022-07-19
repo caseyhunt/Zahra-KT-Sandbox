@@ -36,7 +36,7 @@ body{
 }
 
 #btConnectCube2, #btConnectCube1 {
-  margin-top: 250px;
+  margin-top: 350px;
   display:flex;
 }
 
@@ -509,7 +509,7 @@ select{
 
 /* #dial, #dial1{   (joysticks)
   /* margin-top: 350px; */
-} */
+
 
 #dial {
   margin-left: 60px;
